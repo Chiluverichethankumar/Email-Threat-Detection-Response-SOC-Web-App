@@ -1,0 +1,28 @@
+{% extends 'detector/base.html' %}
+{% block content %}
+<h1>Scan History</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Classification</th>
+      <th>Score</th>
+      <th>Issues</th>
+      <th>Report</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for s in scans %}
+    <tr>
+      <td>{{ s.uploaded_at|date:"Y-m-d H:i" }}</td>
+      <td><span class="tag {{ s.classification|lower }}">{{ s.classification }}</span></td>
+      <td>{{ s.score }}</td>
+      <td>{{ s.issues|truncatechars:60 }}</td>
+      <td><a href="{% url 'report_pdf' s.pk %}" style="color: #007bff;">PDF</a></td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="5">No scans yet.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,102 @@
+Delivered-To: chiluverichethankumar@gmail.com
+Received: by 2002:a05:6a10:7c83:b0:67c:ee74:5fc7 with SMTP id ap3csp1374592pxc;
+        Thu, 30 Oct 2025 23:16:55 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGqleuGwQAqZgHbomEpRE3d0beO949Zc2y6vdbgj7/dsDdKugxhADzK3nJKf95wuH6+tIJL
+X-Received: by 2002:a05:6214:3010:b0:87f:fbe1:2c2a with SMTP id 6a1803df08f44-8802f30b579mr30781456d6.26.1761891415390;
+        Thu, 30 Oct 2025 23:16:55 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1761891415; cv=none;
+        d=google.com; s=arc-20240605;
+        b=iK+Mu3waTN6Y6K7CBrjm2KowoZRR3smNOvQjnfMt/YWpYoxqcYmAoviRrQQ7VG+lkd
+         XGp7IQd4NHpavmFw358m8UJ0OjtHqSnpaJIpyYDGGSOE86/1J8B3IGoD7JsT+bZB8JBK
+         cp8716PlGB8IuLaeMc74y/wMAPnjC1I+n0IaBMQ/s1KFiWo15JNNtCTeZEvAt3oTqGHM
+         J4Pyavhd2bW6AA1ke87Yf4XJCZ1TMRlWBN25Yh2a5cMKab+nGv0yqWp+04h0z0mj6VGR
+         g7xjB3czYoYRfk2vlUtWrNAdsasaUdStdBMxvWC/COpFjM6gzae810RH5sKWdtOGj2LM
+         gAgw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=Vpmpb7JkQW0anrz4VXUDraTIxLrLPiZY/XbznMvQgTI=;
+        fh=fsQojLX1fJmbp6z1djCJPKZR7qBieRtIK6dxyRinRUc=;
+        b=MiS/qHHQH6uLbU3SX9R8stgChrHDCOZa7fHRvElcb7dW3NWo/XNWceghl+wcCJZIU7
+         GU5oQYGW3FY6TKt3V8c6xJgNti7k1nWJQWZqKknBVUp/u+ZpvwKFXJKfgdtJrVaAp48F
+         dyQg3ud9cGa1hSUKd+Ap4vWI1JuN2ILp0tsFAAiEs7uaMeJt+mEFmRO5nEz7SF0Uzzhz
+         W2GPtyabS4IAxgZZWJ/n+j16o9JfAURkySb+8Vzwa8ZU/K+A6R9arro1ofjFeYBsqQbW
+         DaCEQfUTXKRGuRSbcjLHqYLQXFrRx9AKZq1QKrb37RPHLYHXMivt+owuA4QWg7/sIs4v
+         Wzjg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@exlservice.com header.s=oracle-cns-1708825260861 header.b=WkL4SY2p;
+       spf=pass (google.com: domain of exl-fusion-notification@exlservice.com designates 147.154.59.195 as permitted sender) smtp.mailfrom=EXL-Fusion-Notification@exlservice.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=exlservice.com
+Return-Path: <EXL-Fusion-Notification@exlservice.com>
+Received: from smtp4.email.us-ashburn-1.ocs.oraclecloud.com (smtp4.email.us-ashburn-1.ocs.oraclecloud.com. [147.154.59.195])
+        by mx.google.com with ESMTPS id 6a1803df08f44-8803e1294f5si165666d6.1498.2025.10.30.23.16.55
+        for <chiluverichethankumar@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 30 Oct 2025 23:16:55 -0700 (PDT)
+Received-SPF: pass (google.com: domain of exl-fusion-notification@exlservice.com designates 147.154.59.195 as permitted sender) client-ip=147.154.59.195;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@exlservice.com header.s=oracle-cns-1708825260861 header.b=WkL4SY2p;
+       spf=pass (google.com: domain of exl-fusion-notification@exlservice.com designates 147.154.59.195 as permitted sender) smtp.mailfrom=EXL-Fusion-Notification@exlservice.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=exlservice.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=oracle-cns-1708825260861;
+ d=exlservice.com;
+ h=Date:To:From:Subject:Message-Id:MIME-Version:Sender:List-Unsubscribe:List-Unsubscribe-Post;
+ bh=Vpmpb7JkQW0anrz4VXUDraTIxLrLPiZY/XbznMvQgTI=;
+ b=WkL4SY2pndxP28GC5CGvxijb7Sjgb2OZn/2+3YKY43ZGlIPla34LR/SDHLo2xU9E5kkvSE6QqVyv
+   z2UJkPs6E/YJNGnVQCgwFnUvQiHtSzvpTPap8dPG8UU3zo1I/e4pNdDlCLwz/rhECoIVIU9f9xNI
+   PXI+pnZcjdk52szu5og=
+Received: from dkim-sign.oraclecloud.com by
+ smtp4.email.us-ashburn-1.ocs.oraclecloud.com
+ (Oracle Communications Messaging Server 8.1.0.1.20250220 64bit (built Feb 20
+ 2025)) id <0T4Z1J400G43DS00@smtp4.email.us-ashburn-1.ocs.oraclecloud.com> for
+ chiluverichethankumar@gmail.com; Fri, 31 Oct 2025 06:16:52 +0000 (GMT)
+Received: from ewjt-auxvm4.ewjt1.mdt01iad01prd.oraclevcn.com
+ (nlb-outbound-smtp.mta.email.oraclevcn.com [10.32.0.46])
+ by smtp4.email.us-ashburn-1.ocs.oraclecloud.com
+ (Oracle Communications Messaging Server 8.1.0.1.20250220 64bit (built Feb 20
+ 2025))
+ with ESMTPSA id <0T4Z1J07AG442150@smtp4.email.us-ashburn-1.ocs.oraclecloud.com> for
+ chiluverichethankumar@gmail.com; Fri, 31 Oct 2025 06:16:52 +0000 (GMT)
+Date: Fri, 31 Oct 2025 06:16:52 +0000 (UTC)
+From: EXL-Fusion-Notification <EXL-Fusion-Notification@exlservice.com>
+To: chiluverichethankumar@gmail.com
+Message-id: <38e9656bac137a110a52382acba80053.ums@oracle.com>
+Subject: Confirm your identity
+MIME-version: 1.0
+Content-type: text/html; charset=utf-8
+Content-transfer-encoding: quoted-printable
+X-Priority: 1
+X-EmailDriver-Message-ID: 38e968deac137a0755ddb1a7c7e2e793
+
+Hello Chethankumar,<br/><br/>Just one more step before you get started.<br/=
+><br/>You must confirm your identity using the one-time pass code : 607679<=
+br/><br/>Note : This code will expire in 10 minutes.<br/><br/>Sincerely,<br=
+/>EXL Talent Acquisition Team<br/><img src=3D"data:image/png;base64,iVBORw0=
+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
+ABJRU5ErkJggg=3D=3D" data-filename=3D"EXL_Logo.png">

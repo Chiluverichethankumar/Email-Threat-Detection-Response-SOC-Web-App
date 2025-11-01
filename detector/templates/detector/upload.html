@@ -1,0 +1,9 @@
+{% extends 'detector/base.html' %}
+{% block content %}
+<h1>Upload .eml File for Phishing Detection</h1>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <p><input type="file" name="eml_file" accept=".eml" required></p>
+  <p><button type="submit">Analyze</button></p>
+</form>
+{% endblock %}

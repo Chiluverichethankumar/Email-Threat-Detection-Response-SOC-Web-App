@@ -1,0 +1,223 @@
+Delivered-To: chiluverichethankumar@gmail.com
+Received: by 2002:a05:6a10:2a8e:b0:670:cdf7:9daa with SMTP id ja14csp4497787pxb;
+        Mon, 20 Oct 2025 22:11:21 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFLyLTHvjw9nI00vHiHE0MTGF/PxUqJnMdcWgObbs4VFezdlAtgvyf882pFtZPLJa5BC/bz
+X-Received: by 2002:a17:902:cf0b:b0:24c:cb60:f6f0 with SMTP id d9443c01a7336-290cb66025amr211589715ad.58.1761023481264;
+        Mon, 20 Oct 2025 22:11:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1761023481; cv=none;
+        d=google.com; s=arc-20240605;
+        b=M6mOzqX+vlbRyo+xZZKnuwBZMSsa8Cyp0C8Q+u6SKyHZfZF6C9TFaHwE4rohslTQNt
+         TZs9a07nZvCpahki3aDRC3hMi1htPVe7O1jNwxeN3v2h4K7vP2sr4qntCwqZrsFLXh8c
+         67eUzEo7fd/46BnfIICcZWXHZhaAnU/usCyJSXarmv4pQiSTuHtQPxUHYY4s2xLq9P+v
+         Apv7rO+Tax/MANkU4f6KtUxLJIQ3ZMAHtX0o2ElvOX+ThUEwmXP7nVszC+qNepcsQOom
+         xPJw4U+edwr7F5hiJxpgU5G3B1eLR2xFQOPc72hy8M6zZIoUPfv6FMF56hTTbXSohiZd
+         /VMA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:list-owner:list-subscribe:list-unsubscribe-post
+         :list-unsubscribe:list-help:precedence:message-id:subject:from:to
+         :date:dkim-signature;
+        bh=PV29kyj6Itq1u+bZrMLSVOTfK29PFwmzqdCHTV6ynsc=;
+        fh=fsQojLX1fJmbp6z1djCJPKZR7qBieRtIK6dxyRinRUc=;
+        b=cT0lC3t4B87i58AEgFncMq/piii8H0TnVgAYYOYObmR/+E9WxTS8kxvYunxTDe2kzz
+         jzI+hEadoMYEnpOpHhf/zWli1bFYbXHwQdzLa80sNgZhhDXqs48R+4ml3r3T5JURPBtW
+         tFE14DtmFgZhVdhPhV/WWH8W4EqazgH587tCUqIRcX7uBP0XLSeP72cqehyUuW4dV3up
+         o5Pcb4zyGkzvCCd5ydhc5kdgzNbC+/fmfaxCG25h2WNlajgTzlXdS/ksIl8qBHiQxAeL
+         +XT6/P6sr+TziIXUkTQIJWA/1+dE889glM+a0ku3aBKIVW1E2fgV2s/ltTGKM5U5JAn+
+         szHw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@techslash.com header.s=kmta header.b=PnGDuIov;
+       spf=pass (google.com: domain of reshma@techslash.com designates 172.238.55.216 as permitted sender) smtp.mailfrom=reshma@techslash.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=techslash.com
+Return-Path: <reshma@techslash.com>
+Received: from kmta.techslash.com (kmta.techslash.com. [172.238.55.216])
+        by mx.google.com with ESMTPS id d9443c01a7336-29246fc02ebsi60701775ad.150.2025.10.20.22.11.21
+        for <chiluverichethankumar@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 20 Oct 2025 22:11:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of reshma@techslash.com designates 172.238.55.216 as permitted sender) client-ip=172.238.55.216;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@techslash.com header.s=kmta header.b=PnGDuIov;
+       spf=pass (google.com: domain of reshma@techslash.com designates 172.238.55.216 as permitted sender) smtp.mailfrom=reshma@techslash.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=techslash.com
+X-KumoRef: eyJfQF8iOiJcXF8vIiwicmVjaXBpZW50IjoiY2hpbHV2ZXJpY2hldGhhbmt1bWFyQGdtYWlsLmNvbSJ9
+DKIM-Signature: v=1; a=rsa-sha256; d=techslash.com; s=kmta; c=relaxed/relaxed;
+	bh=PV29kyj6Itq1u+bZrMLSVOTfK29PFwmzqdCHTV6ynsc=;
+	h=from:to:subject:date; t=1761023481;
+	b=PnGDuIovbRhl12FiTwRtsG8ZGaHCq5MR2fsVeWUxoFYEEYidECIzqwxXQsevaIHevCOWvauiK
+	Mw9hsCORYtl0BPqzzY270wgpHHL378t8F+QespAPGLuA81H/SIOvkQxIj4lTZPGlst+aEZ5xx1o
+	pMOG53O4tq49dARb/PBGu/M=;
+Date: Tue, 21 Oct 2025 05:11:20 +0000
+To: chiluverichethankumar@gmail.com
+From: Reshma <reshma@techslash.com>
+Subject: Greetings from ACCENTURE TECHNOLOGIES - Finish Your Application to get shortlisted
+Message-ID: <QOFq8L7YbM00oLDE0RveRXdwiUJamNnSXfu7dsHRu7k@techslash.com>
+X-phpList-version: 3.6.12
+X-MessageID: 43
+X-ListMember: chiluverichethankumar@gmail.com
+Precedence: bulk
+List-Help: <http://www.techslash.com/lists/?p=preferences&uid=e8d74f2402b280cf319b6940dcb42d7d>
+List-Unsubscribe: <http://www.techslash.com/lists/?p=unsubscribe&uid=e8d74f2402b280cf319b6940dcb42d7d&jo=1>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Subscribe: <http://www.techslash.com/>
+List-Owner: <mailto:reshma@techslash.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1_QOFq8L7YbM00oLDE0RveRXdwiUJamNnSXfu7dsHRu7k"
+
+This is a multi-part message in MIME format.
+
+--b1_QOFq8L7YbM00oLDE0RveRXdwiUJamNnSXfu7dsHRu7k
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+**Backend Specialist Programmer**
+
+ Educational Qualification: Bachelor's degree in Engineering (B.E or
+B.Tech)
+ Experience: 2 to 4 years of relevant industry experience
+ Core Competencies:=20
+=20
+ Advanced knowledge of Java programming
+ Hands-on experience with RESTful APIs, microservices architecture, and
+containerization tools such as Docker
+ Strong skills in programming, problem-solving, data structures, and
+algorithms
+ Good understanding of computer science fundamentals, distributed systems,
+and web technologies
+ Proficient in Java-based backend frameworks like Spring, Spring Boot, or
+Vert.x
+
+ Database Proficiency:
+=20
+ Experience with SQL databases such as MySQL and PostgreSQL
+ Familiarity with NoSQL databases like MongoDB and Cassandra
+
+ Additional Technical Skills:
+=20
+ Understanding of observability and monitoring tools
+ Experience working with managed cloud platforms (AWS, Azure, or GCP)
+ Exposure to distributed messaging systems (e.g., RabbitMQ, Google Pub/Sub)
+ Knowledge of caching mechanisms like Redis
+
+ Framework Expertise:
+=20
+ Expertise in the Spring Boot ecosystem, including Hibernate, JPA,
+Controllers, Services, and Repositories
+
+ Design & Feature Implementation:
+=20
+ Capability to design and implement features independently (not mandatory
+for interns)
+
+ Preferred Qualifications:
+=20
+ Familiarity with Java 8 or later features
+ Basic knowledge of at least one cloud platform (AWS, GCP, or Azure) =
+=E2=80=93
+Optional for interns
+ Strong command over SQL
+ Understanding of Data Structures and Algorithms is an advantage
+
+
+
+Unsubscribe
+<http://www.techslash.com/lists/lt.php?tid=3D6b8oPKkPt0+ZGZRh8QYouOrmY3VYvI=
+7EsaOWUG8i8jWgd3o+EqDeKYJ2TxKUgXLF>
+
+
+
+
+-- powered by phpList, www.phplist.com --
+
+
+--b1_QOFq8L7YbM00oLDE0RveRXdwiUJamNnSXfu7dsHRu7k
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>=0A        <meta content=3D"text/html;charset=3DUTF-8" http-equ=
+iv=3D"Content-Type">=0A        <meta content=3D"width=3Ddevice-width"/>=0A =
+       <title></title></head><body><div style=3D"border:2px solid #333; pad=
+ding:20px; border-radius:10px; background:#fafafa;">
+
+<h2>Backend Specialist Programmer</h2>
+
+<ul>
+    <li><strong>Educational Qualification:</strong> Bachelor's degree in En=
+gineering (B.E or B.Tech)</li>
+    <li><strong>Experience:</strong> 2 to 4 years of relevant industry expe=
+rience</li>
+    <li><strong>Core Competencies:</strong>=20
+        <ul>
+            <li>Advanced knowledge of Java programming</li>
+            <li>Hands-on experience with RESTful APIs, microservices archit=
+ecture, and containerization tools such as Docker</li>
+            <li>Strong skills in programming, problem-solving, data structu=
+res, and algorithms</li>
+            <li>Good understanding of computer science fundamentals, distri=
+buted systems, and web technologies</li>
+            <li>Proficient in Java-based backend frameworks like Spring, Sp=
+ring Boot, or Vert.x</li>
+        </ul>
+    </li>
+
+    <li><strong>Database Proficiency:</strong>
+        <ul>
+            <li>Experience with SQL databases such as MySQL and PostgreSQL<=
+/li>
+            <li>Familiarity with NoSQL databases like MongoDB and Cassandra=
+</li>
+        </ul>
+    </li>
+
+    <li><strong>Additional Technical Skills:</strong>
+        <ul>
+            <li>Understanding of observability and monitoring tools</li>
+            <li>Experience working with managed cloud platforms (AWS, Azure=
+, or GCP)</li>
+            <li>Exposure to distributed messaging systems (e.g., RabbitMQ, =
+Google Pub/Sub)</li>
+            <li>Knowledge of caching mechanisms like Redis</li>
+        </ul>
+    </li>
+
+    <li><strong>Framework Expertise:</strong>
+        <ul>
+            <li>Expertise in the Spring Boot ecosystem, including Hibernate=
+, JPA, Controllers, Services, and Repositories</li>
+        </ul>
+    </li>
+
+    <li><strong>Design & Feature Implementation:</strong>
+        <ul>
+            <li>Capability to design and implement features independently (=
+not mandatory for interns)</li>
+        </ul>
+    </li>
+
+    <li><strong>Preferred Qualifications:</strong>
+        <ul>
+            <li>Familiarity with Java 8 or later features</li>
+            <li>Basic knowledge of at least one cloud platform (AWS, GCP, o=
+r Azure) =E2=80=93 Optional for interns</li>
+            <li>Strong command over SQL</li>
+            <li>Understanding of Data Structures and Algorithms is an advan=
+tage</li>
+        </ul>
+    </li>
+</ul>
+
+
+</div>
+<br /><a href=3D"http://www.techslash.com/lists/lt.php?tid=3De09WXVIDAlxQAB=
+1SCQkHGgcFUAccCQ5VAEtaVwNXVgMDBQFcUl1MAQIGBgUDDlQaBgoGAhwEUgcNSwFSVFUdCwUGA=
+1JWVwICUVAFT1EJVgAEU1cEHAEFBQlLVwYHXx0KAQQFSQQDAVZaVwgCBwsCAg" >Unsubscribe=
+</a>
+=0A<img src=3D"http://www.techslash.com/lists/ut.php?u=3De8d74f2402b280cf31=
+9b6940dcb42d7d&amp;m=3D43" width=3D"1" height=3D"1" border=3D"0" alt=3D"" /=
+></body></html>
+
+--b1_QOFq8L7YbM00oLDE0RveRXdwiUJamNnSXfu7dsHRu7k--
+

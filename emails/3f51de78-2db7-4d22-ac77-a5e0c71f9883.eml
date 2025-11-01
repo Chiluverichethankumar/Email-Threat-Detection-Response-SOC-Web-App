@@ -1,0 +1,188 @@
+Delivered-To: chiluverichethankumar@gmail.com
+Received: by 2002:a05:6a10:7c83:b0:67c:ee74:5fc7 with SMTP id ap3csp1638102pxc;
+        Fri, 31 Oct 2025 06:32:02 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IF90mTf37iT37aAFGxpbdt2+d119ZvjQ/KLgA+gSW9uQsg4u4V3OT9j/Sb0tgxcLIGW5BLi
+X-Received: by 2002:a17:903:2441:b0:295:20c5:5453 with SMTP id d9443c01a7336-29520c5565dmr43107785ad.29.1761917520364;
+        Fri, 31 Oct 2025 06:32:00 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1761917520; cv=none;
+        d=google.com; s=arc-20240605;
+        b=I187YeVs1Hx54+0D15sA0h5qZyYpH7mNHYbZtlkHs7eHTasssB2DYH1/48jRw6G4G5
+         GRQ2KJPxNBJg2f8yRDXyOxrSH9opUygOh+Wh7/78iIe2BctslPsAonYfmNeti6B3+KyG
+         gYbXNcDz5lbAzJp0SoRDtJl/UMP6lGTq2qOK2WLUmzHspkeswjWn9B+rb0I87VcgePld
+         c/uXwzTo2h2rYHvZTaNOxHFQSAgdvak55bPpfupdmVqHmoRdksjeZsgWgsVyLRGZdmks
+         cpHYQbEM1Fme4N8gZINfOy6dTw3AvIc4agxAzAdE3AYtao5zQDStSB0kHNMJnN9KGMOi
+         v81g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:mime-version:subject:to:reply-to:from:date
+         :dkim-signature:dkim-signature;
+        bh=JtoMxWWFQ1cD/lVkM5zljAJkfiCcOd9UipqNyTpkRsg=;
+        fh=fsQojLX1fJmbp6z1djCJPKZR7qBieRtIK6dxyRinRUc=;
+        b=c0kDwqaYOf1PgqaeLYFflKW/z7obFgnoLbaltlpAYrR/yiG63w1ElI43TKykT7vWRJ
+         k5aLiLcTqC9ARxexvRXKJJ8029lLS0a2fR7Ww5LnZaa7N6sGUJxWApHHSFLbtYo+DrYR
+         KbA2brX4EFR5PYilxt03MDIn2hclPwemAsoVYZtN7ar9UB3rYIz27gTBo8mZpk02rMXd
+         sXZL7NtmWVg6vm/RV95s2GC5f+HZxv36kdRHq5Z6a1GeEju6mm6//ZquDKfGNcgUMbAy
+         DnYj3UOby/gsQJbo3ZUSWVVrAQLE69Zg0nGr82BjA93qFlSKhG28cQYQIDBP/PQo0qqW
+         yf4g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@hirist.tech header.s=4r4unt236twfgaxcsg2cikongc2ixezs header.b=Mn24yzDL;
+       dkim=pass header.i=@amazonses.com header.s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx header.b=GXwhBGwo;
+       spf=pass (google.com: domain of 0101019a3a77c82b-add76ea5-07c1-4107-8907-907ff7c0cbfd-000000@postmaster.hirist.tech designates 54.240.27.128 as permitted sender) smtp.mailfrom=0101019a3a77c82b-add76ea5-07c1-4107-8907-907ff7c0cbfd-000000@postmaster.hirist.tech;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=hirist.tech
+Return-Path: <0101019a3a77c82b-add76ea5-07c1-4107-8907-907ff7c0cbfd-000000@postmaster.hirist.tech>
+Received: from a27-128.smtp-out.us-west-2.amazonses.com (a27-128.smtp-out.us-west-2.amazonses.com. [54.240.27.128])
+        by mx.google.com with ESMTPS id d9443c01a7336-29526998061si11860945ad.185.2025.10.31.06.32.00
+        for <chiluverichethankumar@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 31 Oct 2025 06:32:00 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0101019a3a77c82b-add76ea5-07c1-4107-8907-907ff7c0cbfd-000000@postmaster.hirist.tech designates 54.240.27.128 as permitted sender) client-ip=54.240.27.128;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@hirist.tech header.s=4r4unt236twfgaxcsg2cikongc2ixezs header.b=Mn24yzDL;
+       dkim=pass header.i=@amazonses.com header.s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx header.b=GXwhBGwo;
+       spf=pass (google.com: domain of 0101019a3a77c82b-add76ea5-07c1-4107-8907-907ff7c0cbfd-000000@postmaster.hirist.tech designates 54.240.27.128 as permitted sender) smtp.mailfrom=0101019a3a77c82b-add76ea5-07c1-4107-8907-907ff7c0cbfd-000000@postmaster.hirist.tech;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=hirist.tech
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=4r4unt236twfgaxcsg2cikongc2ixezs; d=hirist.tech; t=1761917520;
+	h=Date:From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID;
+	bh=hY90ZlhAdJ8lKBhq7wG/R25SA5cZ1jtiuA/od/Usv7E=;
+	b=Mn24yzDLCGq5FO8SkS5kuCVyQ2yBSus21mriv/xbFR8epS5YxLZ97GMihvAO8hvC
+	/ulp5nLcX8J7DDn26uzg7E8bUE4ROWEwQd/6oCUIrkYfq3kjyKl13B+l+UAL/Za84Mo
+	agydyTyYY23Ekq8FYN196Ca6+ohJZqoFcvNDuVBc=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1761917520;
+	h=Date:From:Reply-To:To:Subject:MIME-Version:Content-Type:Message-ID:Feedback-ID;
+	bh=hY90ZlhAdJ8lKBhq7wG/R25SA5cZ1jtiuA/od/Usv7E=;
+	b=GXwhBGwo48Qxh5zzy7v61QyZuw0KpebUPqITdor1R0X7iR867F2ijzBdnb9s/MJJ
+	i1f5i+yB2r/aBWVprMSALtXfHp/6KklFY9U1GukWM96XgBWGaKWaq3NnqfPjkdHWt/q
+	9WMpuUwW2Ahu+09VVOFxyFXLwiD+0o2LVd2nCDcw=
+Date: Fri, 31 Oct 2025 13:31:59 +0000
+From: "hirist.tech" <info@hirist.tech>
+Reply-To: "hirist.tech" <info@hirist.tech>
+To: chiluverichethankumar@gmail.com
+Subject: Tracxn - Senior Engineer - Web Crawling & Automation (1-8 yrs)
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_242006_368859641.1761917519955"
+Message-ID: <0101019a3a77c82b-add76ea5-07c1-4107-8907-907ff7c0cbfd-000000@us-west-2.amazonses.com>
+Feedback-ID: ::1.us-west-2.qwcXgh25GITLsLx1ZZUGQwRNefECmFrWT39Dpe8Y7Fk=:AmazonSES
+X-SES-Outgoing: 2025.10.31-54.240.27.128
+
+------=_Part_242006_368859641.1761917519955
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Please Enable HTML
+------=_Part_242006_368859641.1761917519955
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml"><head><meta http-equiv=3D"Content-Type" content=3D"text/htm=
+l; charset=3DUTF-8"/><meta name=3D"format-detection" content=3D"telephone=
+=3Dno"><meta name=3D"viewport" content=3D"width=3Ddevice-width;initial-scal=
+e=3D1.0;maximum-scale=3D1.0;user-scalable=3Dno;"><meta http-equiv=3D"X-UA-C=
+ompatible" content=3D"IE=3D9; IE=3D8; IE=3D7; IE=3DEDGE" /><title>Suitable =
+candidates</title><style type=3D"text/css">@import url('https://fonts.googl=
+eapis.com/css?family=3DRoboto');</style></head><body style=3D"padding:0; ma=
+rgin:0"><table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" style=3D"max-width:600px;margin: 0 auto; padding: 0; border:0px solid #=
+e8e8e8" width=3D"100%"><tr class=3D"body" style=3D"background:#fff;"><td al=
+ign=3D"left" valign=3D"middle" colspan=3D"2"><p style=3D"padding:20px 15px =
+0;font-family:arial; font-size:14px; line-height:20px;">Hello Chiluveri Che=
+thankumar chiluveri,</p><pre style=3D"padding:0px 15px 0;font-family:arial;=
+ font-size:14px; line-height:20px;"></pre><div style=3D"padding:0px 15px;fo=
+nt-family:arial; font-size:14px; line-height:20px;">Your profile appears to=
+ be a strong match for the job opportunity listed on hirist.tech. Please ta=
+ke a look and consider applying<br /> <br /> <div style=3D\"padding:0px 15p=
+x;font-family:arial; font-size:14px; line-height:20px;\"><p><b>Total Experi=
+ence :</b> 1+ years<br/><br/><b>Mode of Hire :</b> Permanent<br/><br/><b>Re=
+quired Skills Set (Mandatory) :</b> JavaScript/Node.js/Python, Web Crawling=
+ (Puppeteer/Playwright), Strong knowledge of web technologies<br/><br/><b>D=
+esired Skills (Good if you have) :</b> HTML, Distributed Systems, Data pipe=
+lines, Proxy Management, Anti-bot Techniques<br/><br/><b>Job Responsibiliti=
+es :</b><br/><br/>- Design scalable web crawling solutions using modern tec=
+hnologies like Puppeteer and Playwright.<br/><br/>- Develop optimal and cos=
+t-effective methods for efficiently crawling diverse websites at scale.<br/=
+><br/>- Implement robust proxy management and sophisticated anti-bot techni=
+ques.<br/><br/>- Create comprehensive debugging and monitoring systems for =
+crawler performance.<br/><br/>- Actively contribute to technical discussion=
+s and architectural decision-making processes.<br/><br/><b>Job Requirements=
+ :</b><br/><br/>- Experience in end-to-end management of large-scale distri=
+buted web crawling.<br/><br/>- Deep understanding of website internal mecha=
+nics, enabling innovative data extraction strategies.<br/><br/>- Expert-lev=
+el proficiency in JavaScript/Node.js, web technologies, and anti-bot measur=
+es.<br/><br/>- Demonstrated ability to understand, adapt, and extend curren=
+t system architectures.<br/><br/>- Strong collaborative skills with the abi=
+lity to work effectively within existing technical frameworks.<br/><br/><b>=
+Preferred Qualifications :</b><br/><br/>- Advanced system optimization skil=
+ls.<br/><br/>- Proven experience with cloud platforms, databases, and distr=
+ibuted systems.<br/><br/>- Comprehensive knowledge of data pipelines and da=
+ta warehousing concepts.<br/><br/><b>Culture :</b><br/><br/>- Work with per=
+formance-oriented teams driven by ownership and passion.<br/><br/>- Learn t=
+o design systems for high accuracy, efficiency, and scalability.<br/><br/>-=
+ No strict deadlines, focus on delivering quality work.<br/><br/>- Meritocr=
+acy-driven, candid culture. No politics.<br/><br/>- Very high visibility re=
+garding which startups and markets are exciting globally.<br/><br/><b>About=
+ Tracxn :</b><br/><br/>Tracxn (Tracxn.tech) is a Bangalore-based product co=
+mpany providing a research and deal sourcing platform for Venture Capital, =
+Private Equity, Corp Dev, and professionals working around the startup ecos=
+ystem.<br/><br/>We are a team of 600+ working professionals serving custome=
+rs across the globe. Our clients include Funds like Andreessen Horowitz, Ma=
+trix Partners, GGV Capital, and Large Corporations such as Citi, Embraer & =
+Ferrero.<br/><br/><b>Founders :</b><br/><br/>- Neha Singh (ex-Sequoia, BCG =
+| MBA - Stanford GSB)<br/><br/>- Abhishek Goyal (ex-Accel Partners, Amazon =
+| BTech - IIT Kanpur)<br/><br/><b>About Technology Team :</b><br/><br/>Trac=
+xn's Technology team is 50+ members strong and growing. The technology team=
+ is subdivided into multiple smaller teams, each owning one or more service=
+s/components of the technology platform. Ours is a young team of motivated =
+engineers with a minimal management structure where almost everyone is acti=
+vely involved in technical development and design activities. We have a tea=
+m-centric culture where the ownership and responsibility of a feature or mo=
+dule lie with a team compared to an individual.<br/><br/>We work on an arra=
+y of technologies, including but not limited to ReactJS, Next.js, Storybook=
+, Webpack, Node, Mongo, AWS Lambda, Spring, Elastic Stack, MySQL, Kafka, Re=
+dis, Ansible, etc. We value ownership, continuous learning, consistency, an=
+d discipline as a team.</p></div></div><p style=3D"padding:20px 15px;font-f=
+amily:arial; font-size:14px; line-height:20px; margin:0;"><a href=3D"https:=
+//postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fj%2Ftracxn-senio=
+r-engineer-web-crawling-automation-1-8-yrs-1563863.html%3Fref=3Ddb/1/010101=
+9a3a77c82b-add76ea5-07c1-4107-8907-907ff7c0cbfd-000000/RdqVGOBlJnI8CWAIU432=
+xt7-oUq4juPz41AYFmgcv7I=3D429" class=3D"apply-button" style=3D"color:white;=
+ text-decoration:none; background-color:#149075; padding:10px 20px; font-si=
+ze:13px;"><span style=3D"font-weight: bold;">Apply</span></a></p><p style=
+=3D"padding:0px 15px;font-family:arial; font-size:14px; line-height:20px;">=
+Best Regards</p><p style=3D"padding:0px 15px 20px;font-family:arial; font-s=
+ize:14px; line-height:20px;">Team hirist<br/>info@hirist.tech</p></td></tr>=
+<tr class=3D"footer" style=3D"padding:10px 0px;"><td align=3D"left" valign=
+=3D"middle"  cellspacing=3D"10"  colspan=3D"2" class=3D"link" style=3D"padd=
+ing:0 15px; border-top:1px solid #efefef;"><p style=3D"color:#111;font-fami=
+ly:arial; font-size:12px; line-height:20px; margin:20px 0 10px;">The sender=
+ of this email is a registered recruiter with <a href=3D"https://postoffice=
+.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2F/1/0101019a3a77c82b-add76ea5=
+-07c1-4107-8907-907ff7c0cbfd-000000/FQ5tyqfGGFf8KF76JB3xBXK9I_a3H3kh5cVzBdQ=
+zzSQ=3D429" style=3D"color:#155d9a; text-decoration:none;">hirist.tech</a> =
+as Sachin Kamkar, Tracxn. All the jobs of this recruiter can be accessed at=
+ <a href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%=
+2Fr%2F66788-sachin-kamkar/1/0101019a3a77c82b-add76ea5-07c1-4107-8907-907ff7=
+c0cbfd-000000/uAdeeidOQegpF6RtnBdFqFlJhe7ow0mah23YqbC6Tpw=3D429" "style=3D"=
+color:#155d9a; text-decoration:none;">https://www.hirist.tech/r/66788-sachi=
+n-kamkar</a></p><p style=3D"color:#939393;font-family:arial; font-size:12px=
+; line-height:20px;margin:5px 0 10px;">Copyright 2025 hirist.tech. All righ=
+ts reserved. <br />Sent by hirist.tech | B-8, Block B, Sector 132, Noida, U=
+ttar Pradesh 201301.</p><p style=3D"color:#939393;font-family:arial; font-s=
+ize:12px; line-height:20px;margin:5px 0 30px;">You are receiving this email=
+ because you have signed up for <a href=3D"https://postoffice.hirist.tech/C=
+L0/https:%2F%2Fwww.hirist.tech%2F/2/0101019a3a77c82b-add76ea5-07c1-4107-890=
+7-907ff7c0cbfd-000000/IXQzvQgsizkecAG38MEDFvRQ8IkmyNhf0rtAoU_vDgI=3D429" st=
+yle=3D"color:#155d9a; text-decoration:none;">hirist.tech</a>. If you don't =
+want to receive emails like these anymore, you can <a href=3D"https://posto=
+ffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fsettings/1/0101019a3a77=
+c82b-add76ea5-07c1-4107-8907-907ff7c0cbfd-000000/UoGBBYg3ACmkABfFvvJL0lJ37N=
+A_sj7DUX8MuiiFy3A=3D429" style=3D"color:#155d9a; text-decoration:none;">uns=
+ubscribe</a>.</p></td></tr></table><img alt=3D"" src=3D"http://postoffice.h=
+irist.tech/CI0/0101019a3a77c82b-add76ea5-07c1-4107-8907-907ff7c0cbfd-000000=
+/UOxuKbRDBuJkeQN_degSgnsBYylibWKEuBMmaia1aQs=3D429" style=3D"display: none;=
+ width: 1px; height: 1px;">
+</body>   </html>
+------=_Part_242006_368859641.1761917519955--

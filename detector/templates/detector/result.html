@@ -1,0 +1,15 @@
+{% extends 'detector/base.html' %}
+{% block content %}
+<h1>Analysis Result</h1>
+<div class="result {{ scan.classification|lower }}">
+  <h2>{{ scan.classification }} (Score: {{ scan.score }}/10)</h2>
+  <p><strong>From:</strong> {{ from_addr }}</p>
+  <p><strong>Subject:</strong> {{ subject }}</p>
+  <p><strong>Issues:</strong> {{ scan.issues }}</p>
+
+  <p>
+    <a href="{% url 'history' %}">Back to History</a> |
+    <a href="{% url 'report_pdf' scan.pk %}" style="color: #007bff; font-weight: bold;">Download PDF Report</a>
+  </p>
+</div>
+{% endblock %}
